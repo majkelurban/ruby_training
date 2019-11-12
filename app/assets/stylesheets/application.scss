@@ -165,6 +165,12 @@ body {
  * Custom Styles
  */
 
- .card-block{
-   color: black;
- }
+  .card-block{
+    color: black;
+    text-align: left;
+    padding: 1rem;
+  }
+
+  .auth-links a{
+    color: black;
+  }
