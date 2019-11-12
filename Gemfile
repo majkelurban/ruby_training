@@ -61,3 +61,5 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'urbantest_view_tool', git: 'https://github.com/majkelurban/urbantest_view_tool'
+
+gem 'petergate', '~> 2.0', '>= 2.0.1'
