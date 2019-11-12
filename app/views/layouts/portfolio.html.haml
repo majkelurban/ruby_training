@@ -1,0 +1,21 @@
+!!! 5
+%html
+  %head
+    %title Kurs | #{@page_title}
+    = csrf_meta_tags
+    = stylesheet_link_tag    'portfolios', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+  %body
+    %p.notice= notice 
+    %p.alert= alert
+
+    =render "shared/nav", location: 'top'
+
+    =login_helper
+      
+    =yield 
+
+    =source_helper("application")
+    
+
+  
