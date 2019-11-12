@@ -1,4 +1,23 @@
-%h1 Pages#contact
+%h1 Would you like to work together?
 
-%p
-    = number_to_phone("555555555",  pattern: /(\d{3})(\d{3})(\d{3})$/, delimiter: ' ')
+%hr
+
+.row
+    .col-md-6
+        %h3 Office Address
+
+        %p Skarżyńskiego 4/7 | Świdnik 21-040
+
+        %h3 Phone
+
+        %p= number_to_phone("555555555",  pattern: /(\d{3})(\d{3})(\d{3})$/, delimiter: ' ')
+
+        %h3 Email
+
+        %p
+            %a{:href => "mailto:majkel@urban.com?subject=PortfolioContact" "email me"} Email me
+
+    .col-md-6
+        %iframe{:src => "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2499.216078214705!2d22.6917456159754!3d51.215095039853786!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4722544683ae3bbf%3A0x5c60bf462ab77865!2zU3RhbmlzxYJhd2EgU2thcsW8ecWEc2tpZWdvIDQsIDIxLTA0MCDFmndpZG5paw!5e0!3m2!1spl!2spl!4v1573562857382!5m2!1spl!2spl", :width => "600", :height => "450", :frameborder => "0", :style => "border:0;", :allowfullscreen => ""}
+            
+   
