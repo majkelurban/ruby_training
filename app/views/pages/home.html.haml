@@ -1,11 +1,16 @@
-%h1= "Hi, #{current_user.first_name}" 
-%p This is home page
+-# %h1= "Hi, #{current_user.first_name}" 
+-# %p This is home page
 
-%h1 Blog Posts
-= @posts.inspect
+-# %h1 Blog Posts
+-# = @posts.inspect
 
-%h1 Skills
-= @skills.inspect
+-# %h1 Skills
+-# = @skills.inspect
 
-
+.inner.cover
+    %h1.cover-heading Cover
+    %p.lead 
+        Cover is a one-page template for cos sgfdsfa
+    %p.lead
+        =link_to "About Me", about_path, class: 'btn btn-lg btn-secondary'
 

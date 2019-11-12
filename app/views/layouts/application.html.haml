@@ -1,21 +1,22 @@
 !!! 5
 %html
   %head
+    %meta{:content => 'text/html; charset=UTF-8', 'http-equiv' => 'Content-Type' }
+    %meta{:name => 'viewport', :content => "width=device-width, initial-scale=1, shrink-to-fit=no"}
     %title Kurs | #{@page_title}
     = csrf_meta_tags
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
-    %p.notice= notice 
-    %p.alert= alert
+    .site-wrapper
+      .site-wrapper-inner
+        .cover-container
+          
+          =render "shared/application_nav"
+                     
+          = yield 
+          
+          =render "shared/application_footer"
 
-    =render "shared/nav", location: 'top'
-
-    =login_helper
-      
-    = yield 
+          =source_helper("application")
     
-    = copyright_generator
-
-    =source_helper("application")
-  
