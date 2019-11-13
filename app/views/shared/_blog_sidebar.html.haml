@@ -5,39 +5,20 @@
             Etiam porta
             %em sem malesuada magna
             mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.
-        .sidebar-module
-        %h4 Archives
-        %ol.list-unstyled
-            %li
-                %a{:href => "#"} March 2014
-            %li
-                %a{:href => "#"} February 2014
-            %li
-                %a{:href => "#"} January 2014
-            %li
-                %a{:href => "#"} December 2013
-            %li
-                %a{:href => "#"} November 2013
-            %li
-                %a{:href => "#"} October 2013
-            %li
-                %a{:href => "#"} September 2013
-            %li
-                %a{:href => "#"} August 2013
-            %li
-                %a{:href => "#"} July 2013
-            %li
-                %a{:href => "#"} June 2013
-            %li
-                %a{:href => "#"} May 2013
-            %li
-                %a{:href => "#"} April 2013
-        .sidebar-module
-        %h4 Elsewhere
-        %ol.list-unstyled
-            %li
-            %a{:href => "#"} GitHub
-            %li
-            %a{:href => "#"} Twitter
-            %li
-            %a{:href => "#"} Facebook
+
+    .sidebar-module
+    %h4 Elsewhere
+
+    %ol.list-unstyled.social-links
+        %li
+            =link_to "https://github.com" do
+                =fa_icon "github"
+        %li
+            =link_to "https://instagram.com" do
+                =fa_icon "instagram"
+        %li
+            =link_to "https://facebook.com" do
+                =fa_icon "facebook"
+        %li
+            =link_to "https://twitter.com" do
+                =fa_icon "twitter"
