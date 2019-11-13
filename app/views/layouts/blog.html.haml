@@ -1,19 +1,46 @@
 !!! 5
 %html
   %head
+    %meta{:content => 'text/html; charset=UTF-8', 'http-equiv' => 'Content-Type' }
+    %meta{:name => 'viewport', :content => "width=device-width, initial-scale=1, shrink-to-fit=no"}
     %title Kurs | #{@page_title}
     = csrf_meta_tags
     = stylesheet_link_tag    'blogs', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
-    %p.notice= notice 
-    %p.alert= alert
 
-    =login_helper
-      
-    = yield 
+    =render 'shared/blog_nav'
 
-    =render "shared/nav", location: 'bottom'
+    /Start of blog header
+    .blog-header
+      .container
+        .h1.blog-title My Blog
+        %p.lead.blog-description An example blog
+        = link_to 'Write a new blog', new_blog_path if logged_in?(:site_admin)
+    /Start of blog header
+
+    /Start of container
+    .container
+      .row
+        = yield
+
+        =render 'shared/blog_sidebar'
+
+      / start of footer
+    %footer.blog-footer
+      %p
+        Blog template built for
+        %a{:href => "https://getbootstrap.com"} Bootstrap
+        by
+        = succeed "." do
+          %a{:href => "https://twitter.com/mdo"} @mdo
+      %p
+        %a{:href => "#"} Back to top
+    / end of footer
 
     =source_helper("blog")
+    /End of container
+
+      
+  
   

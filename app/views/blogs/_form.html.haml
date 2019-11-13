@@ -7,13 +7,13 @@
     -@blog.errors.full_messages.each do |message|
         %li= @message
 
-    .field
+    .form-group
     = f.label :title 
-    = f.text_field :title 
+    = f.text_field :title, class: 'form-control' 
 
-    .field
+    .form-group
     = f.label :body 
-    = f.text_area :body
+    = f.text_area :body, rows: 15, class: 'form-control'
 
-    .actions
-    = f.submit "create"
+    .form-group
+    = f.submit "Submit", class: 'btn btn-primary'
